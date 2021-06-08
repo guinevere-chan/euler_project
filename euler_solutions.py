@@ -73,3 +73,35 @@ for i in range(20, 100000000000, step=20):
         print(f"The smallest positive number that is evenly divisible by all of the numbers from 1 to 20 is {i}")
         break
     i += 1
+
+# Problem 6
+# Find the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum
+# The sum of squares of the first 100 natural numbers
+sum_of_squares = sum([n**2 for n in range(1, 101)])
+# The square of sum of the first 100 natural numbers
+square_of_sum = sum([n for n in range(1, 101)])**2
+
+diff = square_of_sum - sum_of_squares
+print(f"The difference between the sum of the squares of the first one hundred natural numbers and the square of the "
+      f"sum is {diff}")
+
+# Problem 7
+# By listing the first six prime numbers: 2, 3, 5, 7, 11, and 13, we can see that the 6th prime is 13.
+# What is the 10001st prime number?
+
+prime_number_list = [2, 3, 5, 7, 11]
+i = 13
+while len(prime_number_list) < 10001:
+    if all([i % n != 0 for n in prime_number_list]):
+        prime_number_list.append(i)
+    i += 1
+print(f"The 10001st prime number is {prime_number_list[-1]}")
+
+
+
+
+
+
+
+
+
