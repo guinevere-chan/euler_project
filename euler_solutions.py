@@ -112,6 +112,14 @@ for i in range(len(str(digit))+1):
 print(f"The value of the greatest product is {max(product_list)}")
 
 
+# Problem 9
+# There exists exactly one Pythagorean triplet for which a + b + c = 1000.
+# Find the product abc.
 
-
-
+# First find the abc options that sum to be 1000
+for a in range(1, 400):
+    for b in range(1, 400):
+        c = (1000 - a) - b
+        if a < b < c:
+            if a ** 2 + b ** 2 == c ** 2:
+                print(a * b * c)
